@@ -10,9 +10,7 @@ import com.immoc.product.service.ProductService;
 import com.immoc.product.utils.ResultVOUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,5 +72,15 @@ public class ProductController {
 
 
         return ResultVOUtil.success(productVOList);
+    }
+
+    /**
+     * get the product list (for order service only)
+     * @param productIdList
+     * @return
+     */
+    @PostMapping("/listForOrder")
+    public List<ProductInfo> listForOrder(@RequestBody List<String> productIdList) {
+        return productService.findList(productIdList);
     }
 }

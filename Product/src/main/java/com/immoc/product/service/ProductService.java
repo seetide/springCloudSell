@@ -10,4 +10,11 @@ public interface ProductService {
      */
 
     List<ProductInfo> findUpAll();
+
+    /**
+     * query the product list
+     * @param productIdList
+     * @return
+     */
+    List<ProductInfo> findList(List<String> productIdList);
 }

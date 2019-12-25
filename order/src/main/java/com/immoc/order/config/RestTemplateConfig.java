@@ -10,12 +10,12 @@ import org.springframework.web.client.RestTemplate;
  *
  * @project: order
  */
-@Component
-public class RestTemplateConfig {
-
-    @Bean
-    @LoadBalanced
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
-}
+//@Component
+//public class RestTemplateConfig {
+//
+//    @Bean
+//    @LoadBalanced
+//    public RestTemplate restTemplate() {
+//        return new RestTemplate();
+//    }
+//}
