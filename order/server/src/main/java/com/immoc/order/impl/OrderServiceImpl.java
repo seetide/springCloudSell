@@ -1,4 +1,4 @@
-package com.immoc.order.service.impl;
+package com.immoc.order.impl;
 
 import com.immoc.order.dataobject.OrderMaster;
 import com.immoc.order.dto.OrderDTO;
